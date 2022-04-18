@@ -1,0 +1,453 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Ansible Overview</title>
+
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/black.css">
+
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <p style="color: Orange; font-size: 6rem;">Ansible Overview</p>
+        </section>
+        <section data-auto-animate>
+          <p data-id="covering" style="color: Orange; font-size: 6rem;">What will be covered?</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="covering" style="color: Red; font-size: 5rem;">What will be covered?</p>
+          <p data-id="covering" style="color: Orange; font-size: 3rem;">- What is ansible</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="covering" style="color: Red; font-size: 5rem;">What will be covered?</p>
+          <p data-id="covering" style="color: #333333; font-size: 3rem;">- What is ansible</p>
+          <p data-id="covering" style="color: Orange; font-size: 3rem;">- Why Ansible</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="covering" style="color: Red; font-size: 5rem;">What will be covered?</p>
+          <p data-id="covering" style="color: #333333; font-size: 3rem;">- What is ansible</p>
+          <p data-id="covering" style="color: #333333; font-size: 3rem;">- Why Ansible</p>
+          <p data-id="covering" style="color: Orange; font-size: 3rem;">- Common use cases</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="covering" style="color: Red; font-size: 5rem;">What will be covered?</p>
+          <p data-id="covering" style="color: #333333; font-size: 3rem;">- What is ansible</p>
+          <p data-id="covering" style="color: #333333; font-size: 3rem;">- Why Ansible</p>
+          <p data-id="covering" style="color: #333333; font-size: 3rem;">- Common use cases</p>
+          <p data-id="covering" style="color: orange; font-size: 3rem;">- Examples in practice</p>
+        </section>
+
+
+
+
+        <section>
+          <p  style="color: orange; font-size: 7rem;">What is Ansible?</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="ansibleDescription" style="color: Red; font-size: 3rem;">Official page</p>
+          <a data-id="ansibleDescription" href="https://www.ansible.com/">https://www.ansible.com/</a>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="ansibleDescription" style="color: orange; font-size: 3rem;">What Ansible do?</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="ansibleDescription" style="color: Red; font-size: 5rem;">... many things ...</p>
+          <div class="r-stack">
+            <img class="fragment" src="./imgs/ansible_desc1.png" max-width="100%" height="300">
+            <img class="fragment" src="./imgs/ansible_desc2.png" max-width="100%" height="350">
+            <img class="fragment" src="./imgs/ansible_desc3.png" max-width="100%" height="450">
+            <img class="fragment" src="./imgs/ansible_desc4.png" max-width="100%" height="550">
+          </div>
+
+        </section>
+
+
+
+        <!-- Ansible competitors -->
+        <section data-auto-animate>
+          <p data-id="similar" style="color: Orange; font-size: 6rem;">Ansible is not alone ..</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="similar" style="color: Red; font-size: 5rem;">Some of them:</p>
+          <h3 data-id="similar" style="color: Orange;">- Puppet</h3>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="similar" style="color: Red; font-size: 5rem;">Some of them:</p>
+          <h3 data-id="similar" style="color: #333333;">- Puppet</h3>
+          <h3 data-id="similar" style="color: Orange;">- Chef</h3>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="similar" style="color: Red; font-size: 5rem;">Some of them:</p>
+          <h3 data-id="similar" style="color: #333333;">- Puppet</h3>
+          <h3 data-id="similar" style="color: #333333;">- Chef</h3>
+          <h3 data-id="similar" style="color: orange;">- Saltstack</h3>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="similar" style="color: Red; font-size: 5rem;">Some of them:</p>
+          <h3 data-id="similar" style="color: #333333;">- Puppet</h3>
+          <h3 data-id="similar" style="color: #333333;">- Chef</h3>
+          <h3 data-id="similar" style="color: #333333;">- Saltstack</h3>
+          <h3 data-id="similar" style="color: orange;">- Many more ...</h3>
+        </section>
+
+
+
+        <!-- Why ansible? -->
+        <section data-auto-animate>
+          <p data-id="whyAnsibleTitle1" style="color: orange; font-size: 6rem;">Why Ansible?</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="whyAnsibleTitle1" style="color: orange; font-size: 6rem;">Why Ansible?</p>
+          <p data-id="whyAnsibleTitle1" style="color: Red;">Obvious already?</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="whyAnsibleTitle1" style="color: orange; font-size: 6rem;">Why Ansible?</p>
+          <p data-id="whyAnsible" style="color: Red; font-size: 3rem;">IF not, imagine this ..</p>
+          <p data-id="whyAnsible" style="color: Orange; font-size: 3rem;">- One single server</p>
+          <img src="imgs/ibm_power_single.png" alt="" height="150px" width="130px">
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="whyAnsibleTitle1" style="color: orange; font-size: 6rem;">Why Ansible?</p>
+          <p data-id="whyAnsible" style="color: Red; font-size: 3rem;">IF not, imagine this ..</p>
+          <p data-id="whyAnsible" style="color: Orange; font-size: 3rem;">- One single server</p>
+          <img src="imgs/ibm_power_single.png" alt="" height="150px" width="130px">
+          <p data-id="whyAnsible" style="color: Gray;">- Config, users, app, db..</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="whyAnsibleTitle1" style="color: orange; font-size: 6rem;">Why Ansible?</p>
+          <p data-id="whyAnsible" style="color: Red; font-size: 3rem;">IF not, imagine this ..</p>
+          <p data-id="whyAnsible" style="color: Orange; font-size: 3rem;">- One single server</p>
+          <img src="imgs/ibm_power_single.png" alt="" height="150px" width="130px">
+          <p data-id="whyAnsible" style="color: #333333;">- Config, users, app, db..</p>
+          <p data-id="whyAnsible" style="color: Gray;">- EZ! 😏 </p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="whyAnsibleTitle1" style="color: orange; font-size: 6rem;">Why Ansible?</p>
+          <p data-id="whyAnsible" style="color: Red; font-size: 3rem;">Now this ..</p>
+          <img src="./imgs/ibm_power.png" alt="" height="200px" width="430px">
+          <p data-id="whyAnsible" style="color: Gray; font-size: 3rem;">- Config, users, app, db..</p>
+        </section>
+
+        <section data-auto-animate>
+          <p data-id="whyAnsibleTitle1" style="color: orange; font-size: 6rem;">Why Ansible?</p>
+          <p data-id="whyAnsible" style="color: Red; font-size: 3rem;">Now this ..</p>
+          <img src="./imgs/ibm_power.png" alt="" height="200px" width="430px">
+          <p data-id="whyAnsible" style="color: #333333; font-size: 3rem;">- Config, users, app, db..</p>
+          <p data-id="whyAnsible" style="color: Gray; font-size: 3rem;">- GG! 🤕 </p>
+        </section>
+
+
+
+
+        <!-- Danger! -->
+        <section data-auto-animate>
+          <h1 data-id="Danger" style="color: Red;">Danger!</h1>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="Danger" style="color: Red;">Danger!</h1>
+          <p data-id="Danger" style="color: Gray; font-size: 3rem;">Be careful with automation!</p>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="Danger" style="color: Red;">Danger!</h1>
+          <p data-id="Danger" style="color: Gray; font-size: 3rem;">Be careful with automation!</p>
+          <p data-id="Danger" style="color: Orange; font-size: 3rem;"> *** No backup *** </p>
+        </section>
+
+
+        <!-- Generic View -->
+        <section data-auto-animate>
+          <h1 data-id="ansibleInfra" style="color: Orange;">How it works?</h1>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="ansibleInfra" style="color: Red;">How it works?</h1>
+          <h3 data-id="ansibleInfra" style="color: Gray;">Ansible Engine (Server)</h3>
+          <img src="./imgs/ansible_infra.png" alt="">
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="ansibleInfra" style="color: Red;">How it works?</h1>
+          <h3 data-id="ansibleInfra" style="color: Gray;">Multiple clients</h3>
+          <img src="./imgs/ansible_infra_multiple_servers.png" alt="">
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="ansibleInfra" style="color: Red;">Benefits:</h1>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="ansibleInfra" style="color: Red;">Benefits:</h1>
+          <h3 data-id="ansibleInfra" style="color: Orange;">No client installation</h3>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="ansibleInfra" style="color: Red;">Benefits:</h1>
+          <h3 data-id="ansibleInfra" style="color: #333333;">No client installation</h3>
+          <h3 data-id="ansibleInfra" style="color: Orange;">Agentless (just SSH)</h3>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="ansibleInfra" style="color: Red;">Benefits:</h1>
+          <h3 data-id="ansibleInfra" style="color: #333333;">No client installation</h3>
+          <h3 data-id="ansibleInfra" style="color: #333333;">Agentless (just SSH)</h3>
+          <h3 data-id="ansibleInfra" style="color: Orange;">Python is required</h3>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="ansibleInfra" style="color: Red;">Benefits:</h1>
+          <h3 data-id="ansibleInfra" style="color: #333333;">No client installation</h3>
+          <h3 data-id="ansibleInfra" style="color: #333333;">Agentless (just SSH)</h3>
+          <h3 data-id="ansibleInfra" style="color: #333333;">Python is required</h3>
+          <h3 data-id="ansibleInfra" style="color: Orange;">Open Source / Free</h3>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="ansibleInfra" style="color: Red;">Benefits:</h1>
+          <h3 data-id="ansibleInfra" style="color: #333333;">No client installation</h3>
+          <h3 data-id="ansibleInfra" style="color: #333333;">Agentless (just SSH)</h3>
+          <h3 data-id="ansibleInfra" style="color: #333333;">Python is required</h3>
+          <h3 data-id="ansibleInfra" style="color: #333333;">Open Source / Free</h3>
+          <h3 data-id="ansibleInfra" style="color: Orange;">Linux, Windows, Mac, AIX, **VIO, **Router, etc</h3>
+        </section>
+
+
+
+
+
+        <!-- Practice Time-->
+        <section data-auto-animate>
+          <h1 data-id="Practice" style="color: Orange;">Practice Time!</h1>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="Practice" style="color: Red;">Practice Time!</h1>
+          <h3 style="color: Orange;">Installation (RHEL)</h3>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="Practice" style="color: Red;">Practice Time!</h1>
+          <h3 style="color: Orange;">Installation (RHEL)</h3>
+          <h3 style="color: Gray;">- Enable EPEL repository</h3>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="Practice" style="color: Red;">Practice Time!</h1>
+          <h3 style="color: Orange;">Installation (RHEL)</h3>
+          <h3 style="color: #333333;">- Enable EPEL repository</h3>
+          <h3 style="color: Gray;">- Installation command</h3>
+          <pre><code data-trim data-noescape>
+            $ sudo yum install -y ansible
+          </code></pre>
+        </section>
+
+
+
+
+        <!-- Default configs -->
+        <section data-auto-animate>
+          <h1 data-id="config" style="color: Orange;">Default config</h1>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="config" style="color: Orange;">Default config</h1>
+          <!-- <pre><code data-trim data-noescape style="width: 100vh; margin-left: -20%;"> -->
+          <pre><code data-trim data-noescape>
+          # cd /etc/ansible
+          # ls
+          ansible.cfg
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="config" style="color: Orange;">Default config</h1>
+          <!-- <pre><code data-trim data-noescape style="width: 100vh; margin-left: -20%;"> -->
+          <pre><code data-trim data-noescape>
+          # cd /etc/ansible
+          # ls
+          ansible.cfg
+          </code></pre>
+          <p>
+          <span style="color: Orange;">- ansible.cfg    <span style="color: #333333;">(config file)<br>
+          <span style="color: Orange;">- hosts/<span style="color: red;">inventory <span style="color: #333333;">(inventory file)
+          </p>
+        </section>
+
+
+
+        <!-- Running -->
+        <section data-auto-animate>
+          <h1 data-id="running" style="color: Red;">Running ansible</h1>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="running" style="color: Red;">Running ansible</h1>
+          <h3 data-id="running" style="color: Orange;">Ad-hoc commands</h3>
+        </section>
+        <section data-auto-animate>
+          <h1 data-id="running" style="color: Red;">Running ansible</h1>
+          <h3 data-id="running" style="color: #333333;">Ad-hoc commands</h3>
+          <h3 data-id="running" style="color: Orange;">Playbook</h3>
+        </section>
+
+
+
+        <!-- Ad-hoc -->
+        <section data-auto-animate>
+          <h1 data-id="running" style="color: Red;">Ad-hoc commands</h1>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="running" style="color: Red;">Ad-hoc commands</h1>
+          <pre><code data-trim data-noescape>
+          $ ansible -m ping linux
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="running" style="color: Red;">Ad-hoc commands</h1>
+          <pre><code data-trim data-noescape>
+          $ ansible -m ping linux
+          $ ansible linux -i inventory.inv -a "cat /etc/os-release"
+          </code></pre>
+        </section>
+
+
+        <section data-auto-animate>
+          <h1 data-id="running" style="color: Red;">Ad-hoc commands</h1>
+          <pre><code data-trim data-noescape>
+          $ ansible linux -m ping -i inventory.inv
+          vm4 | SUCCESS => {
+              "ansible_facts": {
+                  "discovered_interpreter_python": "/usr/bin/python3"
+              },
+              "changed": false,
+              "ping": "pong"
+          }
+          </code></pre>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="running" style="color: Red;">Ad-hoc commands</h1>
+          <pre><code data-trim data-noescape style="max-width: 100vh; height: 100vh;">
+          $ ansible linux -i inventory.inv -a "cat /etc/os-release"
+          vm4 | CHANGED | rc=0 >>
+          NAME="Ubuntu"
+          VERSION="20.04.3 LTS (Focal Fossa)"
+          ID=ubuntu
+          ID_LIKE=debian
+          PRETTY_NAME="Ubuntu 20.04.3 LTS"
+          VERSION_ID="20.04"
+          HOME_URL="https://www.ubuntu.com/"
+          SUPPORT_URL="https://help.ubuntu.com/"
+          BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+          PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+          VERSION_CODENAME=focal
+          UBUNTU_CODENAME=focal
+          </code></pre>
+        </section>
+
+
+
+
+        <!-- Playbook -->
+        <section data-auto-animate>
+          <h1 data-id="playbook" style="color: Red;">Playbook time</h1>
+        </section>
+
+        <section data-auto-animate>
+          <h1 data-id="playbook" style="color: Red;">Playbook time</h1>
+          <h3 data-id="playbook" style="color: Orange;">Installing package</h3>
+          <pre><code data-trim data-noescape style="max-width: 100vh; height: 100vh;">
+          ---
+          - name: my first playbook
+            hosts: linux
+
+            tasks:
+              - name: Install vim
+                become: true
+                apt:
+                  name: vim
+                  state: latest
+          </code></pre>
+        </section>
+
+
+
+        <!-- Links -->
+        <section data-auto-animate style="color: Red; font-size: 9rem;">
+          <p data-id="playbook" style="color: Red; font-size: 6rem;">Some links</p>
+        </section>
+
+        <section data-auto-animate style="color: Red; font-size: 9rem;">
+          <p data-id="playbook" style="color: Red; font-size: 6rem;">Some links</p>
+          <p data-id="playbook" style="color: Red; font-size: 2rem;">become</p>
+          <pre><code data-trim data-noescape style="font-size: 1rem;">
+          https://docs.ansible.com/ansible/latest/user_guide/become.html
+          </code></pre>
+        </section>
+
+        <section data-auto-animate style="color: Red; font-size: 9rem;">
+          <p data-id="playbook" style="color: Red; font-size: 6rem;">Some links</p>
+          <p data-id="playbook" style="color: Red; font-size: 2rem;">become</p>
+          <pre><code data-trim data-noescape style="font-size: 1rem;">
+          https://docs.ansible.com/ansible/latest/user_guide/become.html
+          </code></pre>
+          <p data-id="playbook" style="color: Red; font-size: 2rem;">modules</p>
+          <pre><code data-trim data-noescape style="font-size: 1rem;">
+          https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
+          </code></pre>
+        </section>
+
+
+        <section style="color: orange;">Live coding</section>
+
+        <section style="color: orange;">Question?</section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+        autoAnimateEasing: 'ease-out',
+        autoAnimateDuration: 0.8,
+        autoAnimateUnmatched: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+      });
+    </script>
+  </body>
+</html>
